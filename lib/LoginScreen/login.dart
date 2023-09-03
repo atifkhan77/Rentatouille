@@ -50,6 +50,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
               child: TextField(
                 controller: _usernameController,
                 decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
                   labelText: "Username",
                 ),
               ),
@@ -61,6 +62,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                 controller: _passwordController,
                 obscureText: true,
                 decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
                   labelText: "Password",
                 ),
               ),
