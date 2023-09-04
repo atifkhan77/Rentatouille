@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rentatouille/LoginScreen/Textfields.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -7,79 +8,42 @@ class Login extends StatefulWidget {
   State<Login> createState() => _LoginState();
 }
 
-class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
-  late Animation<double> _fadeAnimation;
-
-  final TextEditingController _usernameController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 1),
-    );
-
-    _fadeAnimation =
-        Tween<double>(begin: 0, end: 1).animate(_animationController);
-
-    _animationController.forward();
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
-  }
-
+class _LoginState extends State<Login> {
+  TextEditingController _passwordController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height * 1;
+    final width = MediaQuery.sizeOf(context).width * 1;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Login"),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FadeTransition(
-              opacity: _fadeAnimation,
-              child: TextField(
-                controller: _usernameController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Username",
-                ),
+      body: Container(
+        width: width * 1,
+        height: height * 1,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.deepPurple, Colors.purple, Colors.pink],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter),
+        ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20, height * 0.2, 20, 0),
+            child: Column(children: [
+              Image.asset(
+                'images/house.png',
+                fit: BoxFit.fitWidth,
+                width: 240,
+                height: 240,
+                color: Colors.white,
               ),
-            ),
-            const SizedBox(height: 16.0),
-            FadeTransition(
-              opacity: _fadeAnimation,
-              child: TextField(
-                controller: _passwordController,
-                obscureText: true,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Password",
-                ),
-              ),
-            ),
-            const SizedBox(height: 32.0),
-            FadeTransition(
-              opacity: _fadeAnimation,
-              child: ElevatedButton(
-                onPressed: () {
-                  String username = _usernameController.text;
-                  String password = _passwordController.text;
-                  debugPrint("Username: $username\nPassword: $password");
-                },
-                child: const Text("Login"),
-              ),
-            ),
-          ],
+              const SizedBox(height: 30),
+              reusableWidget("Enter UserName", Icons.person_outline, false,
+                  _emailController),
+              const SizedBox(height: 30),
+              reusableWidget("Enter Password", Icons.lock_outline, false,
+                  _passwordController),
+            ]),
+          ),
         ),
       ),
     );
