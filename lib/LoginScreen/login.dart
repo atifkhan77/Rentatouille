@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rentatouille/LoginScreen/Textfields.dart';
+import 'package:rentatouille/LoginScreen/signInButtons.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -42,6 +43,8 @@ class _LoginState extends State<Login> {
               const SizedBox(height: 30),
               reusableWidget("Enter Password", Icons.lock_outline, false,
                   _passwordController),
+              const SizedBox(height: 30),
+              signInButton(context, true, () {})
             ]),
           ),
         ),
