@@ -56,6 +56,7 @@ class _LoginState extends State<Login> {
   }
 
   Row SignUpOption() {
+    //for making code easily understandable
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
