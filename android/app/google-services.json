@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "706981548105",
+    "project_id": "rentatouille-25891",
+    "storage_bucket": "rentatouille-25891.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706981548105:android:cc04615a41268d409d6f98",
+        "android_client_info": {
+          "package_name": "com.example.rentatouille"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkjH7fQToZBvHVox2eKSbpWnXPWlneYZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
