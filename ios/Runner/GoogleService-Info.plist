@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD9TdH1q2e3gq3qiszceAw9FnI_NV6OI1c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>706981548105</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.rentatouille</string>
+	<key>PROJECT_ID</key>
+	<string>rentatouille-25891</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rentatouille-25891.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:706981548105:ios:a9f5ac3f443246bf9d6f98</string>
+</dict>
+</plist>
