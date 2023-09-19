@@ -47,8 +47,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               reusableWidget(
                   "password", Icons.lock_outline, true, _passwordController),
               const SizedBox(height: 20),
-              reusableWidget(
-                  "confirm password", Icons.lock, true, _passwordController),
+              reusableWidget("confirm password", Icons.lock_outline, true,
+                  _passwordController),
               const SizedBox(height: 40),
               signInButton(context, false, () {}),
             ]),
