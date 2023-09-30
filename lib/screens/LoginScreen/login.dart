@@ -42,6 +42,44 @@ class _LoginState extends State<Login> {
               const SizedBox(height: 20),
               reusableWidget("Enter Password", Icons.lock_outline, true,
                   _passwordController),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: width * 1,
+                height: 50,
+                margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(90),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.resolveWith((states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.black26;
+                      }
+                      return Colors.white;
+                    }),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(30),
+                        ),
+                      ),
+                    ),
+                  ),
+                  child: const Text(
+                    "Login as Seller",
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
               const SizedBox(height: 20),
               signInButton(context, true, () {}),
               const SizedBox(
@@ -68,7 +106,7 @@ class _LoginState extends State<Login> {
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => SignUpScreen(),
+                builder: (context) => const SignUpScreen(),
               ),
             );
           },
